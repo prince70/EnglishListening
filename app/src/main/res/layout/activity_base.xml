@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.feng.englishlistening.view.MyLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.feng.englishlistening.view.ActivityHeaderView xmlns:myapp="http://schemas.android.com/apk/res/com.feng.englishlistening"
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        myapp:titleText=""
+        myapp:titleTextSize="@dimen/sp_15" />
+
+    <FrameLayout
+        android:id="@+id/base_content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:id="@+id/refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/abus_white"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+        </LinearLayout>
+
+    </FrameLayout>
+</com.feng.englishlistening.view.MyLinearLayout>

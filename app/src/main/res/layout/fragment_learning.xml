@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- btnMainActivitySinglechoiceofPractice -->
+        <Button
+            android:id="@+id/btnMAsp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:text="英语听力选择题（练习模式）" />
+
+        <!-- btnMainActivitySinglechoiceofTest -->
+        <Button
+            android:id="@+id/btnMAst"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@color/colorPrimary"
+            android:text="英语听力选择题（测试模式）" />
+
+        <!-- btnMainActivityCompoundDictation -->
+        <Button
+            android:id="@+id/btnMAcd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@color/colorPrimary"
+            android:text="复合式听写（练习测试混合模式）" />
+
+    </LinearLayout>
+</LinearLayout>

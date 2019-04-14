@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_0_5"
+        android:background="@color/abus_white" />
+
+    <com.feng.englishlistening.view.MessageArrowView
+        android:id="@+id/ma_setting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></com.feng.englishlistening.view.MessageArrowView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/dp_10"
+            android:background="@color/abus_red"
+            android:onClick="SignOut"
+            android:text="退出登录"
+            android:textColor="@color/abus_white"
+            android:textSize="@dimen/sp_15" />
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="300dp">
+
+        <TextView
+            android:id="@+id/tvCDQText"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:ellipsize="none"
+            android:scrollbars="vertical"
+            android:singleLine="false"
+            android:text="" />
+
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/imgVCDSplit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/line" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.33"
+            android:orientation="vertical">
+
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.02">
+
+                <TextView
+                    android:id="@+id/tvCD36"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="36" />
+
+                <EditText
+                    android:id="@+id/etCDQOne"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:text="" />
+
+                <requestFocus />
+
+                <TextView
+                    android:id="@+id/tvCD37"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="37" />
+
+                <EditText
+                    android:id="@+id/etCDQTwo"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:text=""></EditText>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.02">
+
+                <TextView
+                    android:id="@+id/tvCD38"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="38" />
+
+                <EditText
+                    android:id="@+id/etCDQThree"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10" />
+
+                <TextView
+                    android:id="@+id/tvCD39"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="39" />
+
+                <EditText
+                    android:id="@+id/etCDQFour"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:text="" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/tvCD40"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="40" />
+
+                <EditText
+                    android:id="@+id/etCDQFive"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/tvCD41"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="41" />
+
+                <EditText
+                    android:id="@+id/etCDQSix"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:text="" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.02">
+
+                <TextView
+                    android:id="@+id/tvCD42"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="42" />
+
+                <EditText
+                    android:id="@+id/etCDQSeven"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:text="" />
+
+                <TextView
+                    android:id="@+id/tvCD43"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="43" />
+
+                <EditText
+                    android:id="@+id/etCDQEight"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:text="" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.02">
+
+                <TextView
+                    android:id="@+id/tvCD44"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="44" />
+
+                <EditText
+                    android:id="@+id/etCDQNine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:singleLine="false" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.02">
+
+                <TextView
+                    android:id="@+id/tvCD45"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="45" />
+
+                <EditText
+                    android:id="@+id/etCDQTen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:singleLine="false" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.02">
+
+                <TextView
+                    android:id="@+id/tvCD46"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:text="46" />
+
+                <EditText
+                    android:id="@+id/etCDQEleven"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:singleLine="false" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+    >
+
+</LinearLayout>

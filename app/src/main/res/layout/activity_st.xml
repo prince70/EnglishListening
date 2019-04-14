@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+ 
+<LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content" >
+
+     <TextView
+         android:id="@+id/tvSTQID"
+         android:layout_width="70dp"
+         android:layout_height="wrap_content"
+         android:text="第11题" />  
+     <RatingBar
+         android:id="@+id/rBarSTLevel"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:numStars="5"
+         android:isIndicator="true" 
+         android:rating="0.0" />
+     
+
+ </LinearLayout>
+ 
+<LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content" >
+      
+ <RadioGroup android:id="@+id/rgtST" android:contentDescription="选项" android:layout_width="wrap_content" android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rbtSTAText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="A. Children should be taught to be more careful." />
+
+        <RadioButton
+            android:id="@+id/rbtSTBText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="B. Children shouldn’t drink so much orange juice." />
+
+        <RadioButton
+            android:id="@+id/rbtSTCText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="C. There is no need for the man to make such a fuss." />
+
+        <RadioButton
+            android:id="@+id/rbtSTDText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="D. Timmy should learn to do things in the right way." />
+         </RadioGroup>    
+         
+ </LinearLayout>
+
+  <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >           
+
+            <Button
+                android:id="@+id/btnSTSubmit"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="判断正误" />
+
+            <Button
+                android:id="@+id/btnSTNext"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="进入下一题" />
+
+            <TextView
+                android:id="@+id/tvSTRAnswer"
+                android:layout_width="match_parent"
+                android:layout_height="68dp"
+                android:gravity="center"
+                android:text="正确答案为:B"
+                android:textColor="#ff0000"/>
+
+        </LinearLayout>
+
+<RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="66dp" >
+
+                <ImageView
+                    android:id="@+id/imgSTVright"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/right" />
+
+                <ImageView
+                    android:id="@+id/imgSTVwrong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/wrong" />
+            </FrameLayout>
+
+        </RelativeLayout>
+
+</LinearLayout>

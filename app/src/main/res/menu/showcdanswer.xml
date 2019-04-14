@@ -1,0 +1,9 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:v7="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/give_cdanswer"
+        android:icon="@mipmap/bublelight"
+        android:title="bingo"
+        v7:showAsAction="ifRoom" />
+</menu>
