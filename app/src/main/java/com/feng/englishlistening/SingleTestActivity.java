@@ -9,6 +9,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -17,8 +18,10 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class SingleTestActivity extends BaseActivity {
+    private static final String TAG = "SingleTestActivity";
     private final String DBPATH = "/data/data/com.feng.englishlistening/databases/";
     private final String DBFILENAME = "dbcet4l.db";
     private final String DBPATHFN = DBPATH + DBFILENAME;
@@ -86,13 +89,19 @@ public class SingleTestActivity extends BaseActivity {
                 if (v.getId() == R.id.btnSTSubmit) {
                     isRW = judgeRW();
                     if (cST.isLast()) {
-                        setRightRating(rightCount + isRW, totalCount + 1);
+                        setRightRating(rightCount + isRW, totalCount + 1);//成绩
                     }
                 } else if (v.getId() == R.id.btnSTNext) {
                     if (cST == null)
                         return;
                     if (!cST.isLast()) {
-                        moveNextRecord(cST);
+                        judgeRW();
+                        Log.e(TAG, "onClick: "+strUserA );
+                        if (strUserA.equals("")) {
+                            Toast.makeText(SingleTestActivity.this, "请您先作答", Toast.LENGTH_SHORT).show();
+                        } else {
+                            moveNextRecord(cST);
+                        }
                     } else {
                         btnNext.setEnabled(false);
                     }
@@ -116,6 +125,11 @@ public class SingleTestActivity extends BaseActivity {
     }
 
 
+    /**
+     * 下一题
+     *
+     * @param Cs
+     */
     private void moveNextRecord(Cursor Cs) {
 
 
@@ -166,6 +180,9 @@ public class SingleTestActivity extends BaseActivity {
             tvRAnswer.setText("恭喜您，答题正确！");
             tvRAnswer.setVisibility(View.VISIBLE);
             return 1;
+        } else if (strUserA.equals("")) {
+            Toast.makeText(this, "请您先作答", Toast.LENGTH_SHORT).show();
+            return 0;
         } else {
             imgVRight.setVisibility(View.INVISIBLE);
             imgVWrong.setVisibility(View.VISIBLE);

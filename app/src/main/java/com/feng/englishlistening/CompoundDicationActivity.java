@@ -9,6 +9,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -33,10 +34,14 @@ public class CompoundDicationActivity extends BaseActivity {
     private String[] strUAnswer = new String[12];
     private boolean isRA = false;
 
+    private TextView tv_grade;
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         tvQuestionLText = (TextView) findViewById(R.id.tvCDQText);
+
+        tv_grade = findViewById(R.id.tv_grade);
 
         for (int iet = 0; iet <= 11; iet++) {
             etUAnswer[iet] = null;
@@ -71,6 +76,16 @@ public class CompoundDicationActivity extends BaseActivity {
 
     @Override
     public String getHeadTitle() {
+        headView.setRightText("提交");
+        headView.setListenerRight(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int judge = Judge();
+                setRAnswer();
+                tv_grade.setText("每道题分数为5分，您最终分数为:"+judge+"分");
+
+            }
+        });
         return "复合式听写";
     }
 
@@ -118,6 +133,22 @@ public class CompoundDicationActivity extends BaseActivity {
         }
     }
 
+    private int Judge() {
+        getUAnswer();
+        int grade = 0;
+        for (int i = 0; i <= 10; i++) {
+            Log.e("Feng", "Judge: " + strUAnswer[i]);
+            Log.e("Feng", "Judge: " + strRAnswer[i + 1]);
+            if (strUAnswer[i + 1].equals(strRAnswer[i + 1])) {
+                grade = grade + 5;
+            }
+        }
+        return grade;
+    }
+
+    /**
+     * 显示正确答案
+     */
     public void setRAnswer() {
         for (int iRA = 1; iRA <= 11; iRA++) {
             etUAnswer[iRA].setBackgroundColor(0xff0000);
